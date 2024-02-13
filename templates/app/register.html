@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h4>S'enregistrer</h4>
+
+{% for message in messages %}
+{{message}}
+{% endfor %}
+
+
+<form action="" method="POST">
+	{% csrf_token %}
+
+	<label for="username">Username</label>
+	<input type="text" name="username" id="username" placeholder="Your username" required>
+    <br><br>
+	<label for="name">name</label>
+	<input type="text" name="name" id="name" placeholder="Your name"required>
+    <br><br>
+	<label for="lastname">Lastname</label>
+	<input type="text" name="lastname" id="lastname" placeholder="Your lastname"required>
+    <br><br>
+	<label for="Email">Email</label>
+	<input type="email" name="email" id="Email" placeholder="Your Email"required>
+    <br><br>
+	<label for="password">Mot de passe</label>
+	<input type="password" name="password" id="password" placeholder="Your password"required>
+    <br><br>
+	<label for="password1">Verifier votre mot de passe</label>
+	<input type="password" name="password1" id="password1" placeholder="Verifie your password"required>
+    <br><br>
+	<button type="submit">S'enregistrer</button>
+
+
+</form>
+
+
+
+
+
+
+
+
+{% endblock %}
