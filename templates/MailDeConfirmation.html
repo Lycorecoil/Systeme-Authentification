@@ -1,0 +1,6 @@
+{% autoescape off %}
+Bienvenu sur le login systeme
+Bonjour {{name}}
+Confirmer votre mail en clickant sur le lien suivant
+lien:https//{{domain}}{% url 'activate' uidb64=uid token=token %}
+{% endautoescape %}

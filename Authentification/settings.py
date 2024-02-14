@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 from . info import *
+import django
+from django.utils.encoding import force_str
+django.utils.encoding.force_text = force_str
 
 
 EMAIL_USE_TLS = EMAIL_USE_TLS
